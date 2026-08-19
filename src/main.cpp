@@ -6,63 +6,7 @@
 #include <utility>
 #include <vector>
 
-
-// Structure representing a single Stream of rain
-struct Stream
-{
-  public:
-    // Get the current position of the stream
-    const std::pair<uint32_t, uint32_t> get_position()
-    {
-      return position;
-    }
-
-    // Increment y by one: downward motion
-    void advance() { position.first += 1; }
-
-  private:
-    // Vector of characters in the stream; the last character in
-    // the vector is the most recently added character
-    std::vector<char> stream_characters { 'B' };
-
-    // Hold the position of the head of stream (x, y)
-    // Increase in the x direction corresponds to a rightward shift 
-    // Increase in the y direction corresponds to a downward shift
-    std::pair<uint32_t, uint32_t> position { 0, 0 };  // (x, y)
-};
-
-
-// Container to hold all Stream of rain
-class Matrix
-{
-  public:
-    // Constructors: 
-    // Create a matrix with the default number of Streams 
-    Matrix()
-    {
-      streams.assign(100, Stream());
-    }
-    
-    // Create a string of a Matrix with `width` Streams
-    Matrix(uint32_t width)
-    {
-      streams.assign(width, Stream());
-    }
-
-    // Destructor
-    ~Matrix() = default;
-    
-    // Returns a reference to the vector of streams. Allows us to 
-    // draw and advance streams in the vector. Returned object is a 
-    // reference to the actual streams vector. Handle with care 
-    std::vector<Stream>& get_streams()
-    {
-      return streams;
-    }
-
-  private:
-    std::vector<Stream> streams;
-};
+#include "../include/Matrix.hpp"
 
 
 
