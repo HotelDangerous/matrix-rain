@@ -1,5 +1,7 @@
 #include <utility>
 
+#include "../include/StreamCell.hpp"
+
 // Structure representing a single Stream of rain
 struct Stream
 {
@@ -14,9 +16,9 @@ struct Stream
     void advance() { position.first += 1; }
 
   private:
-    // Vector of characters in the stream; the last character in
+    // Array of StreamElements in the stream; the last character in
     // the vector is the most recently added character
-    std::vector<char> stream_characters { 'B' };
+    std::array<StreamChar> stream_characters;
 
     // Hold the position of the head of stream (x, y)
     // Increase in the x direction corresponds to a rightward shift 

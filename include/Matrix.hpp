@@ -1,6 +1,8 @@
 #include <vector>
 #include "../include/Streams.hpp"
 
+struct StreamCell
+
 // Container to hold all Stream of rain
 class Matrix
 {
@@ -32,3 +34,15 @@ class Matrix
   private:
     std::vector<Stream> streams;
 };
+
+class Matrix
+{
+  public:
+
+  private:
+    uint32_t screen_height;
+    uint32_t screen_width;
+    
+    std::array<
+
+}
