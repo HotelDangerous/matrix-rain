@@ -21,6 +21,10 @@ struct StreamCharacter {
     void fade(uint8_t amount) {
       amount > alpha ? alpha = 0 : alpha -= amount;
     }
+    
+    // if the value of alpha is 0, then the character is not visible,
+    // otherwise, the character is considered visible
+    bool is_visible() { return alpha == 0; }
 
     // Overload the << operator, for printing with std::cout 
     // printing considers color and transparency of the character
