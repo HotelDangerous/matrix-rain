@@ -6,7 +6,7 @@
 #include <utility>
 #include <vector>
 
-#include "../include/streams/Stream.hpp"
+#include "../include/streams/StreamCharacter.hpp"
 
 
 
