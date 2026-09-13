@@ -62,8 +62,6 @@ Streams are logically independent but are not executing simultaneously. The Mana
 
 Different streams may nevertheless have different starting locations, progression speeds, fading speeds, and restart times. Their behavior therefore appears independent even though their execution is sequential.
 
-The target frame period is approximately 50 milliseconds.
-
 ---
 
 # 5. Class Structure
