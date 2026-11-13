@@ -8,11 +8,11 @@ int main() {
   Stream stream = Stream(20);
 
   // Print the stream until all characters are not visible
-  while (stream.is_visible()) {
-    // print the stream and add a new character
-    std::cout << stream << std::endl;
+  do {
+    // add a new character and print the stream
     stream.increment();
-  }
+    std::cout << stream << std::endl;
+  } while (stream.is_visible());
   
   return 0;
 }
