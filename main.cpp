@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "./include/streams/stream_character.hpp"
-#include "./include/streams/stream.hpp"
+#include "streams/stream_character.hpp"
+#include "streams/stream.hpp"
 
 int main() {
 
